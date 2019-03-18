@@ -1,18 +1,6 @@
-  
-  SELECT *
-  FROM [msdb].[dbo].[sysjobhistory]
- 
- SELECT *
- FROM msdb.dbo.sysjobhistory JOIN msdb.dbo.sysjobs ON sysjobhistory.job_id = sysjobs.job_id
 
 
-  SELECT *
-  FROM [msdb].[dbo].[sysjobs]
 
-  SELECT * FROM msdb.dbo.sysjobsteps
-
-
---select the job name , failed steps according to the job name
 DECLARE @jobNames VARCHAR(100) = 'ErrorLoggingEmail,ETL'; -- set the job names which want to be tracked comma seperated
 DECLARE @backDate INT = 1; --set the number of days to track back
 
